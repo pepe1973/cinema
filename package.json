@@ -1,0 +1,30 @@
+{
+    "name": "cinema",
+    "version": "1.0.0",
+    "description": "Ez egy mozi honlapja",
+    "main": "/backend/server.js",
+    "scripts": {
+        "dev": "nodemon ./backend/server.js",
+        "start": "node ./backend/server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pepe1973/cinema.git"
+    },
+    "keywords": [],
+    "author": "13/a",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/pepe1973/cinema/issues"
+    },
+    "homepage": "https://github.com/pepe1973/cinema#readme",
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "ejs": "^3.1.10",
+        "express": "^4.21.1",
+        "mongoose": "^8.7.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.7"
+    }
+}
