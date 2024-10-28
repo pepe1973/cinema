@@ -2,7 +2,7 @@
     "name": "cinema",
     "version": "1.0.0",
     "description": "Ez egy mozi honlapja",
-    "main": "/backend/server.js",
+    "main": "./backend/server.js",
     "scripts": {
         "dev": "nodemon ./backend/server.js",
         "start": "node ./backend/server.js"
@@ -22,7 +22,10 @@
         "dotenv": "^16.4.5",
         "ejs": "^3.1.10",
         "express": "^4.21.1",
-        "mongoose": "^8.7.2"
+        "http-errors": "^2.0.0",
+        "joi": "^17.13.3",
+        "mongoose": "^8.7.2",
+        "morgan": "^1.10.0"
     },
     "devDependencies": {
         "nodemon": "^3.1.7"
