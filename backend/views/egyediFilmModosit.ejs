@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="/css/stilus.css"
+        />
+        <style>
+            .adatok {
+                background-color: dodgerblue;
+                border: none;
+                border-radius: 5px;
+                color: whitesmoke;
+                display: inline-block;
+                font-size: 1.5em;
+                padding: 5px;
+                text-decoration: none;
+            }
+        </style>
+        <title>Cinema API/Egyedi film módosítása</title>
+    </head>
+    <body>
+        <%- include('./nav.ejs') %>
+        <div id="kontener">
+            <h1>Film módosítása</h1>
+            <form>
+                <input
+                    type="hidden"
+                    id="idertek"
+                    value="<%= film._id %>"
+                />
+                <table>
+                    <tr>
+                        <td><label for="cim">Cím: </label></td>
+                        <td>
+                            <input
+                                type="text"
+                                id="cim"
+                                value="<%= film.cim %>"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="mufaj">Műfaj: </label></td>
+                        <td>
+                            <input
+                                type="text"
+                                id="mufaj"
+                                value="<%= film.mufaj %>"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="idotartam">Időtartam: </label></td>
+                        <td>
+                            <input
+                                type="number"
+                                id="idotartam"
+                                value="<%= film.idotartam %>"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Eddigi plakát:</td>
+                        <td>
+                            <img
+                                src="<%= film.plakat %>"
+                                style="
+                                    width: 200px;
+                                    height: 200px;
+                                    object-fit: cover;
+                                "
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="plakat">Plakát: </label></td>
+                        <td>
+                            <input
+                                type="text"
+                                id="plakat"
+                                value="<%= film.plakat %>"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="idopontok">Időpontok: </label></td>
+                        <td>
+                            <textarea id="idopontok">
+<%= film.idopontok %></textarea
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button id="feldolgoz">Feldolgoz</button></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <script src="/js/egyediFilmModosit.js"></script>
+    </body>
+</html>

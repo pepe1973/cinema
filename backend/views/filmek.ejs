@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="/css/stilus.css"
+        />
+        <style>
+            .adatok {
+                background-color: dodgerblue;
+                border-radius: 5px;
+                color: whitesmoke;
+                display: inline-block;
+                padding: 5px;
+                text-decoration: none;
+            }
+        </style>
+        <title>Cinema API/Filmek</title>
+    </head>
+    <body>
+        <%- include('./nav.ejs') %>
+        <div id="kontener">
+            <h1>Filmek</h1>
+            <div class="sor">
+                <% filmek.forEach(film => { %>
+                <div class="film">
+                    <h3><%= film.cim %></h3>
+                    <img src="<%= film.plakat %>" />
+                    <!-- <p><ins>Műfaj:</ins> <#%= film.mufaj %></p>
+                    <p><ins>Időtartam:</ins> <#%= film.idotartam %>perc</p>
+                    <p><ins>Időpontok:</ins></p> 
+                    <#% film.idopontok.forEach(idopont => { %>
+                    <p><#%= idopont %></p>
+                    <#% }) %> -->
+                    <p>
+                        <a
+                            href="egyedifilm/<%= film._id %>"
+                            class="adatok"
+                            >Adatok</a
+                        >
+                    </p>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+    </body>
+</html>

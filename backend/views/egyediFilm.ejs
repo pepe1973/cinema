@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="/css/stilus.css"
+        />
+        <style>
+            .adatok {
+                background-color: dodgerblue;
+                border: none;
+                border-radius: 5px;
+                color: whitesmoke;
+                display: inline-block;
+                font-size: 1.5em;
+                padding: 5px;
+                text-decoration: none;
+            }
+        </style>
+        <title>Cinema API/Egyedi film</title>
+    </head>
+    <body>
+        <%- include('./nav.ejs') %>
+        <div id="kontener-film">
+            <h1><%= film.cim %></h1>
+            <img src="<%= film.plakat %>" />
+            <p><ins>Műfaj:</ins> <%= film.mufaj %></p>
+            <p><ins>Időtartam:</ins> <%= film.idotartam %>perc</p>
+            <p><ins>Időpontok:</ins></p>
+            <% film.idopontok.forEach(idopont => { %>
+            <p><%= idopont %></p>
+            <% }) %>
+            <div id="gombok">
+                <button
+                    onclick="torol('<%= film._id %>')"
+                    class="adatok"
+                >
+                    Töröl
+                </button>
+                <a
+                    href="/api/cinema/egyedifilmmodosit/<%= film._id %>"
+                    class="adatok"
+                    >Módosít</a
+                >
+            </div>
+        </div>
+        <script src="/js/filmModosit.js"></script>
+    </body>
+</html>

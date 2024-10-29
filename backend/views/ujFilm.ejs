@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="/css/stilus.css"
+        />
+        <title>Cinema API/Új film felvétele</title>
+    </head>
+    <body>
+        <%- include('./nav.ejs') %>
+        <div id="kontener">
+            <h1>Új film felvétele</h1>
+            <form>
+                <table>
+                    <tr>
+                        <td><label for="cim">Cím: </label></td>
+                        <td>
+                            <input
+                                type="text"
+                                id="cim"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="mufaj">Műfaj: </label></td>
+                        <td>
+                            <input
+                                type="text"
+                                id="mufaj"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="idotartam">Időtartam: </label></td>
+                        <td>
+                            <input
+                                type="number"
+                                id="idotartam"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="plakat">Plakát: </label></td>
+                        <td>
+                            <input
+                                type="text"
+                                id="plakat"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="idopontok">Időpontok: </label></td>
+                        <td>
+                            <textarea id="idopontok"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button id="feldolgoz">Feldolgoz</button></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <script src="/js/ujFilm.js"></script>
+    </body>
+</html>
